@@ -1,0 +1,160 @@
+#heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 1vh;
+    padding-left: 10%;
+    margin: -10px;
+    background-color: rgb(125, 10, 10);
+}
+
+.title {
+    font-size: 2em;
+    padding-right: 25vw;
+    color: rgb(243, 237, 200);
+    font-family: 'Mohave';
+    font-weight: bold;
+    font-style: normal;
+}
+
+#root {
+    padding-top: 5vh;
+}
+
+.button {
+    background-color: rgb(234, 209, 150);
+    border: none;
+    color: #333;
+    padding: 2vw 2vh;
+    margin-right: 10vw;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 4vw;
+    font-style: normal;
+    border-radius: 20%;
+    transition: background-color 0.3s ease;
+}
+
+.button:active {
+    background-color: blue;
+}
+
+@media only screen and (max-width: 768px){
+    #root {
+        padding-top: 5vh;
+    }
+
+    .upload {
+        width: 50vw;
+        height: 75vw;
+        border: 3px solid rgb(191, 49, 49);
+        border-radius: 20px;
+        margin: auto;
+        margin-bottom: 10vh;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plus {
+        font-size: 10vw;
+        color: rgb(191, 49, 49);
+        padding: 0;
+        margin: 0;
+    }
+
+    .book-box {
+        margin: auto;
+        margin-bottom: 5vh;
+        padding-bottom: 75%;
+        height: auto;
+        width: 50vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .book-img {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.forward-button {
+    position: fixed;
+    color: rgb(243, 237, 200);
+    right: 0px;
+    padding: 2vh 6vw;
+    border-radius: 10%;
+    bottom: 0%;
+    transform: translateY(-40%);
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(125, 10, 10);
+}
+
+.back-button {
+    position: fixed;
+    color: rgb(243, 237, 200);
+    left: 0px;
+    padding: 2vh 6vw;
+    bottom: 0%;
+    border-radius: 10%;
+    transform: translateY(-40%);
+    font-size: 2em;
+    background: none;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(125, 10, 10);
+}
+
+
+
+@media only screen and (min-width: 992px) {
+    #root {
+        padding-top: 5vh;
+    }
+
+    .upload {
+        width: 50vw;
+        height: 75vw;
+        border: 3px solid rgb(13, 197, 217);
+        border-radius: 20px;
+        margin: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .plus {
+        font-size: 10vw;
+        color: rgb(13, 197, 217);
+        padding: 0;
+        margin: 0;
+    }
+
+    .book-box {
+        border: 1px solid #333;
+        border-radius: 10px;
+        margin: auto;
+        margin-bottom: 20vh;
+        padding-bottom: 75%;
+        height: auto;
+        width: 50vw;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .book-img {
+        position: absolute;
+        right: 0;
+        width: 100%;
+        height: auto;
+    }
+}

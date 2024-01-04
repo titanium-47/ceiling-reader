@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Mohave">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='main.js')}}" defer></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Ceiling Reader</title>
+</head>
+    <body>
+        <header>
+            <div id="heading">
+                <h1 class="title">Library</h1>
+                <button id="onButton" class="button">On</button>
+                <button id="offButton" class="button">Off</button>
+            </div>
+        </header>
+        <div id="root">
+            <div id="uploadBox" class="upload">
+                <h1 class="plus">+</h1>
+            </div>
+            <input type="file" id="fileInput" style="display: none;">
+            <button id="backButton" class="back-button">←</button>
+            <button id="forwardButton" class="forward-button">→</button>
+        </div>
+    </body>
+</html>

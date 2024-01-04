@@ -1,0 +1,10 @@
+.eggs
+.vscode
+build
+info.json
+pdfs
+images
+__pycache__
+projection_mapping.egg-info
+venv
+.env
