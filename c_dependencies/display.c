@@ -151,11 +151,6 @@ void correct(struct point2d* points, int x, int y, int n) {
   correctPoint(&(points[n]), x, y);
 }
 
-//must be 500x1000
-void transformImage(short* image, struct point2d* edges, struct point2d* transformations) {
-  
-}
-
 void loop () {
   char input = ' ';
   int n = 0;
@@ -198,26 +193,22 @@ int dInit() {
   struct fb_var_screeninfo vinfo;
   struct fb_fix_screeninfo finfo;
 
-  // Open the file for reading and writing
   fbfd = open("/dev/fb0", O_RDWR);
   if (!fbfd) {
     printf("Error: cannot open framebuffer device.\n");
   }
   printf("The framebuffer device was opened successfully.\n");
 
-  // Get fixed screen information
   if (ioctl(fbfd, FBIOGET_FSCREENINFO, &finfo)) {
     printf("Error reading fixed information.\n");
   }
 
-  // Get variable screen information
   if (ioctl(fbfd, FBIOGET_VSCREENINFO, &vinfo)) {
     printf("Error reading variable information.\n");
   }
   printf("%dx%d, %d bpp\n", vinfo.xres, vinfo.yres, 
          vinfo.bits_per_pixel );
 
-  // map framebuffer to user memory 
   screensize = finfo.smem_len;
 
   fbp = (short*)mmap(0, 
@@ -233,7 +224,6 @@ int dInit() {
   buffer = (short*)malloc(screensize);
   isDInit = 1;
 
-  // hide cursor
   char *kbfds = "/dev/tty";
   int kbfd = open(kbfds, O_WRONLY);
   if (kbfd >= 0) {
@@ -246,7 +236,6 @@ int dInit() {
 }
 
 int end() {
-  // cleanup
   munmap(fbp, screensize);
   close(fbfd);
 }
